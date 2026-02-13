@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rádio Web Pires | Ao Vivo</title>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1e1e2f 0%, #0d0d14 100%);
+            font-family: 'Poppins', sans-serif;
+            color: white;
+        }
+        .player-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 40px;
+            border-radius: 30px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            border: 1px solid rgba(255,255,255,0.1);
+            width: 320px;
+        }
+        h1 { margin-bottom: 5px; font-size: 24px; color: #00d4ff; }
+        p { margin-bottom: 25px; opacity: 0.7; font-size: 14px; }
+        .status {
+            display: inline-block;
+            padding: 5px 15px;
+            background: #28a745;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-bottom: 20px;
+            animation: blink 2s infinite;
+        }
+        @keyframes blink {
+            0% { opacity: 1; } 50% { opacity: 0.5; } 100% { opacity: 1; }
+        }
+        audio {
+            width: 100%;
+            margin-top: 10px;
+            filter: invert(100%) hue-rotate(180deg) brightness(1.5);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="player-card">
+        <div class="status">AO VIVO</div>
+        <h1>Rádio Web Pires</h1>
+        <p>A sua melhor companhia online</p>
+        
+        <audio controls autoplay>
+            <source src="https://stream.zeno.fm" type="audio/mpeg">
+            Seu navegador não suporta o player de áudio.
+        </audio>
+
+        <p style="margin-top: 20px; font-size: 10px;">&copy; 2024 Rádio Web Pires</p>
+    </div>
+
+</body>
+</html>
